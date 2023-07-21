@@ -1,0 +1,39 @@
+@supports (display: grid) {
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  }
+  aside {
+    border: 1px solid black;
+    border-radius: 1em;
+  }
+  p::first-letter {
+    -webkit-initial-letter: 4;
+    initial-letter: 4;
+    color: #FE742F;
+    font-weight: bold;
+    margin-right: 0.5em;
+ }
+ @supports (initial-letter: 4) or (-webkit-initial-letter: 4) {
+    p::first-letter {
+       -webkit-initial-letter: 4;
+       initial-letter: 4;
+       color: #FE742F;
+       font-weight: bold;
+       margin-right: 0.5em;
+    }
+  }
+  div {
+    width: 300px;
+    background: yellow;
+  }
+  @supports (object-fit: cover) {
+    img {
+      object-fit: cover;
+    }
+    div {
+      width: auto;
+      background: green;
+    }
+  }
